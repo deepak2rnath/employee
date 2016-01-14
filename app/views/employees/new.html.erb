@@ -1,0 +1,25 @@
+<h1>Employee Details</h1>
+
+
+<%= form_for @employee do |f| %>
+ 
+ 
+ <p>
+     <%= f.label :employee_name %></br>
+     <%= f.text_field :employee_name %>
+ </p>
+ 
+ <p>
+     <%= f.label :city %></br>
+     <%= f.text_field :city %>
+ </p>
+ 
+ <p>
+     <%= f.label :mobile %></br>
+     <%= f.text_field :mobile %>
+ </p>
+ <p>
+     </br><%= f.submit %>
+ </p>
+ 
+ <% end %>
