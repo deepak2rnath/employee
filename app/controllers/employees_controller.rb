@@ -6,15 +6,22 @@ class EmployeesController < ApplicationController
         
     end
     
-           def create
+    def create
     
-           #render plain: params[:employee].inspect
            @employee=Employee.new(employee_params)
-           @employee.save
-           redirect_to Employee_show(@employee)
-           end
+           
+        if @employee.save
+            flash[:notice]="The employee details are successfully added"
+            redirect_to Employee_path(@employee) 
+        else
+            render 'new'
+           #redirect_to Employee_path(@employee)  
+        end
+        
+    end
     
-    private
+    def show
+     @employee = employee.find(params[:id])   
     def employee_params
         params.require(:employee).permit(:employee_name,:city,:mobile)
     end
