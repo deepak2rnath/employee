@@ -1,11 +1,11 @@
-<h1>Employee Details</h1>
-
-<% if @employee.errors.any? %>
+<h1>Edit existing Employee Details <h1>
+    <% if @employee.errors.any? %>
 <h2>The following errors prevented the addition of employee details</h2>
+
 <ul>
- <% @employee.errors.full_messages.each do |msg| %>
- <li><%= msg %></li>
- <% end %>
+<% @employee.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
 </ul>
 <% end %>
 
@@ -35,4 +35,3 @@
  </p>
  
  <% end %>
- 

@@ -1,0 +1,19 @@
+<h1>The Employee Details</h1>
+
+<table>
+<tr>
+<th>Name</th><th>City</th><th>Mobile</th>
+</tr>
+<tr>
+<td><%= @employee.employee_name %></td>
+<td><%= @employee.city %></td>
+<td><%= @employee.mobile %></td>
+
+</tr>
+</table>
+<p>
+<%= link_to 'Edit the details', edit_employee_path(@employee) %>
+</p>
+<p>
+<%= link_to "Back to Employee Listing", employees_path %>
+</p>
