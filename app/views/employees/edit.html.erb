@@ -1,37 +1,4 @@
 <h1>Edit existing Employee Details <h1>
-    <% if @employee.errors.any? %>
-<h2>The following errors prevented the addition of employee details</h2>
 
-<ul>
-<% @employee.errors.full_messages.each do |msg| %>
-<li><%= msg %></li>
-<% end %>
-</ul>
-<% end %>
 
-<%= form_for @employee do |f| %>
- 
- 
- <p>
-     <%= f.label :employee_name %></br>
-     <%= f.text_field :employee_name %>
- </p>
- 
- <p>
-     <%= f.label :city %></br>
-     <%= f.text_field :city %>
- </p>
- 
- <p>
-     <%= f.label :mobile %></br>
-     <%= f.text_field :mobile %>
- </p>
- <p>
-     </br><%= f.submit %>
- </p>
- 
- <p>
- <%= link_to "Back to Employee Listing", employees_path %>
- </p>
- 
- <% end %>
+<%= render 'form' %>

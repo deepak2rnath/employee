@@ -23,14 +23,22 @@ class EmployeesController < ApplicationController
         end
         
     end
-    
+  
     def show
      @employee = Employee.find(params[:id])   
+    end
+    
+    def destroy
+        @employee= Employee.find(params[:id]) 
+        @employee.destroy
+        flash[:notice]="Employee Details are successfully deleted"
+        redirect_to employees_path
     end
     
     def edit
        @employee = Employee.find(params[:id])   
     end
+    
     
     def update
        @employee = Employee.find(params[:id]) 
