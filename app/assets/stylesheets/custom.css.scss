@@ -21,6 +21,33 @@ letter-spacing: 1px;
 
 .center
 {
-    text-align:center;
-    margin-left: 100px;
+    text-align: center;
+}
+
+.jumbotron
+{
+    margin: 0px auto;
+    height: 550px;
+    width: 700px;
+}
+
+footer
+{
+  background-color: #eaeaea;  
+}
+
+footer small
+{
+    float: left;
+}
+footer a:hover
+{
+    color: #222;
+}
+
+nav ul>li
+{
+    float: right;
+    text-decoration: none;
+    list-style-type: none;
 }
