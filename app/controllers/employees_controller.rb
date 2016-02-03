@@ -18,7 +18,7 @@ class EmployeesController < ApplicationController
            @employee=Employee.new(employee_params)
            
         if @employee.save
-            flash[:notice]="The employee details are successfully added"
+            flash[:success]="The employee details are successfully added"
             redirect_to employee_path(@employee) 
         else
             render 'new'
@@ -34,7 +34,7 @@ class EmployeesController < ApplicationController
     def destroy
        
         @employee.destroy
-        flash[:notice]="Employee Details are successfully deleted"
+        flash[:danger]="Employee Details are successfully deleted"
         redirect_to employees_path
     end
     
@@ -46,7 +46,7 @@ class EmployeesController < ApplicationController
     def update
        
        if  @employee.update(employee_params)
-           flash[:notice]="Employee details are successfully updated"
+           flash[:success]="Employee details are successfully updated"
            redirect_to employee_path(@employee)
        else
            render 'edit'

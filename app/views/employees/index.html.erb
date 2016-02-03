@@ -1,15 +1,10 @@
-<h1>Listing All Eployee Details</h1>
+<h2 align="center">Listing All Employee Details</h2
+<%= render'layouts/pagination'%>
+<div class="well col-xs-8 col-xs-offset-2">
 
-<p>
-    <%= link_to "Add Employee Details", new_employee_path %>
-</p>
-
-<table>
-<tr>
-<th>Name</th>
-<th>City</th>
-<th>Mobile</th>
-</tr>
+<table class="table table-striped" id="tab2">
+    
+<tr><h4 class="center"><strong><th>Name</th> <th>City</th> <th>Mobile</th> </strong></h4><th><span></th><th><span></th><th><span></th></tr>
 
 <% @employees.each do |employee| %>
 <tr>
@@ -22,3 +17,4 @@
 </tr>
 <% end %>
 </table>
+</div>

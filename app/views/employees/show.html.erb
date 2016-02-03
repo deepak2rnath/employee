@@ -1,19 +1,22 @@
-<h1>The Employee Details</h1>
-
-<table>
-<tr>
-<th>Name</th><th>City</th><th>Mobile</th>
-</tr>
-<tr>
+<h2 align="center">The Employee Details</h2>
+<div class="well col-xs-6 col-xs-offset-3">
+<table id="tab1">
+<tr><h4 class="center"><strong><th>Name</th> <th>City</th> <th>Mobile</th> </strong></h4></tr>
+<tr>    
 <td><%= @employee.employee_name %></td>
-<td><%= @employee.city %></td>
-<td><%= @employee.mobile %></td>
 
+<td><%= @employee.city %></td>
+
+<td><%= @employee.mobile %></td>
 </tr>
 </table>
+</div>
+<div class="col-xs-6 col-xs-offset-3">
 <p>
-<%= link_to 'Edit the details', edit_employee_path(@employee) %>
+<%= link_to 'Edit the details', edit_employee_path(@employee), class: "btn btn-xs btn-primary"%>
+
+<%= link_to "Back to Employee Listing", employees_path, class: "btn btn-xs btn-primary" %>
+
 </p>
-<p>
-<%= link_to "Back to Employee Listing", employees_path %>
-</p>
+
+</div>
